@@ -21,7 +21,7 @@ def multiply():
         return 'Error: a and b must be integers.'
 
     result = a * b
-    return render_template('result.html', result=result)
+    return render_template('result.html', a=a, b=b, result=result)
 
 if __name__ == '__main__':
     app.run()
