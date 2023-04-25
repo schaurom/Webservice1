@@ -1,3 +1,4 @@
+import webbrowser
 from flask import Flask, request, render_template
 
 app = Flask(__name__, template_folder='templates')
@@ -24,4 +25,8 @@ def multiply():
     return render_template('result.html', a=a, b=b, result=result)
 
 if __name__ == '__main__':
+    # Öffne den Browser und navigiere zur Anwendungsseite
+    webbrowser.open('http://localhost:5000')
+    #starte app
     app.run()
+
